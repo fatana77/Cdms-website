@@ -1,0 +1,313 @@
+/* 🌿 Reset and Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f9fc;
+  color: #222;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* 🌐 Navbar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #0096c7, #48cae4);
+}
+
+/* 🌀 Logo Animation */
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: rotateLogo 5s linear infinite alternate;
+  transition: transform 0.8s ease;
+}
+
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+.logo span {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* 🌟 Nav Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffe066;
+  transform: translateY(-3px);
+}
+
+.nav-links .active {
+  color: #ffea00;
+}
+
+/* 🦷 Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #caf0f8, #e0fbfc);
+  color: #03045e;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #333;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 💎 About Section */
+.about {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #00b4d8;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about p, .about li {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.about ul {
+  list-style-type: "🦷 ";
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.about button {
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.about button:hover {
+  background: #0077b6;
+}
+
+/* 🖼️ Image Center Styling */
+.image-center {
+  margin: 40px 0;
+}
+
+.image-center img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 30px 0 30px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 👨‍⚕️ Doctors Section */
+.team {
+  background: #f1f9ff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.4rem;
+  color: #03045e;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00b4d8;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #0077b6;
+  font-size: 1.3rem;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* 🕒 Timeline Section */
+.timeline {
+  background: linear-gradient(180deg, #e0fbfc, #caf0f8);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2.4rem;
+  color: #03045e;
+  margin-bottom: 30px;
+}
+
+.timeline ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.timeline li {
+  background: #fff;
+  border-left: 5px solid #00b4d8;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.timeline li:hover {
+  transform: translateX(10px);
+}
+
+/* 🦶 Footer */
+.footer {
+  background: linear-gradient(180deg, #0077b6, #023e8a);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about ul {
+    text-align: left;
+    width: 90%;
+  }
+}

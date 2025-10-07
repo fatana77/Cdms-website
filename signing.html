@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Cosmetic Dental & Maxillofacial Surgery</title>
+  <link rel="stylesheet" href="signing.css">
+</head>
+<body class="signup-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="img/denatl logo 55.jpeg" alt="Clinic Logo" width="60">
+      <span>CDMS</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="product.html">Product</a>
+      <a href="add-to-card.html">Add to Cart</a>
+      <a href="signing.html" class="active">Sign Up</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Signup Content -->
+  <section class="signup-container">
+    <h1>Create an Account</h1>
+    <p>Please fill in the form to register.</p>
+
+    <form action="signup_process.php" method="post">
+      
+      <!-- Full Name -->
+      <label for="fullname">Full Name:</label><br />
+      <input type="text" id="fullname" name="fullname" required /><br />
+
+      <!-- Email -->
+      <label for="email">Email Address:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <!-- Phone -->
+      <label for="phone">Phone Number:</label><br />
+      <input type="tel" id="phone" name="phone" /><br />
+
+      <!-- Gender -->
+      <label>Gender:</label><br />
+      <select name="gender" id="gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br />
+
+      <!-- Date of Birth -->
+      <label for="dob">Date of Birth:</label><br />
+      <input type="date" id="dob" name="dob" /><br />
+
+      <!-- Address -->
+      <label for="address">Address / City:</label><br />
+      <input type="text" id="address" name="address" /><br />
+
+      <!-- Password -->
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required /><br />
+
+      <!-- Confirm Password -->
+      <label for="confirm_password">Confirm Password:</label><br />
+      <input type="password" id="confirm_password" name="confirm_password" required /><br />
+
+      <!-- Checkboxes -->
+      <label>
+        <input type="checkbox" required> I agree to the Terms & Conditions
+      </label><br />
+      <label>
+        <input type="checkbox"> Subscribe to our newsletter
+      </label><br /><br />
+
+      <!-- Submit Button -->
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- Link for Already Registered Users -->
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+
+    <!-- Social Media Signup (Optional) -->
+    <div class="social-signup">
+      <p>Or sign up with:</p>
+      <button class="google-btn">Google</button>
+      <button class="facebook-btn">Facebook</button>
+    </div>
+
+    <!-- Decorative Image -->
+    <div class="signup-image">
+      <img src="img/mansa group.jpg" alt="Smiling patient" width="300" />
+    </div>
+  </section>
+
+</body>
+</html>

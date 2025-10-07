@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Cosmetic Dental & Maxillofacial Surgery</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body background="img/login-bg.jpg">
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/denatl logo 55.jpeg" alt="Logo" width="40">
+        <span>CDMS</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Product</a>
+       <a href="contact.html">Contact</a>
+
+      <a href="add-to-card.html">Add to Cart</a>
+      <a href="signing.html" class="active">Sign Up</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- ===== Login Section ===== -->
+  <section class="login-container">
+    <h2>Login to Your Account</h2>
+    <p>Enter your details to access your appointments & records.</p>
+
+    <form action="login-process.php" method="POST">
+      <!-- Username / Email -->
+      <label for="username">Username or Email:</label><br>
+      <input type="text" id="username" name="username" required><br><br>
+
+      <!-- Password -->
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <!-- Remember Me + Forgot Password -->
+      <label>
+        <input type="checkbox" name="remember"> Remember Me
+      </label><br>
+      <a href="forgot-password.html">Forgot Password?</a><br><br>
+
+      <!-- Submit -->
+      <input type="submit" value="Login" class="btn">
+    </form>
+
+    <!-- Signup Link -->
+    <p>Don’t have an account? <a href="signing.html">Sign up here</a></p>
+
+    <!-- Social Login -->
+    <div class="social-login">
+      <p>Or login with:</p>
+      <button class="google-btn">Login with Google</button>
+      <button class="facebook-btn">Login with Facebook</button>
+    </div>
+
+    <!-- Decorative Image -->
+    <div class="login-image">
+      <img src="img/main picture 5667.jpeg" alt="Happy Patient" width="300">
+    </div>
+  </section>
+
+</body>
+</html>
